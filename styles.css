@@ -30,11 +30,27 @@ header>* {
     justify-content: flex-start;
 }
 
+.searchbar input[type='image'], .icon {
+    height: 2rem;
+}
+
+.pfp {
+    height: 3rem;
+    width: auto;
+    border-radius: 100px;
+    border: solid 2px black;
+}
+
+.greeting .pfp {
+    height: 4.5rem;
+}
+
 .sidebar {
     grid-row: 1 / 3;
     display: flex;
     flex-direction: column;
-    gap: 50px
+    gap: 50px;
+    background: rgb(247, 0, 255)
 }
 
 .sidebar-links, .dashboard {
@@ -48,6 +64,7 @@ header>* {
 .sidebar-links h2 {
     font-size: 1.7rem;
 }
+
 
 main {
     display: grid;
