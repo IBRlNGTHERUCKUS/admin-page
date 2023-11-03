@@ -1,21 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --blue: #1992d4;
+}
+
 body{
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 6fr;
     height: 100vh;
     margin: 0;
+    font-family: roboto, sans-serif;
 }
 
 header {
     grid-column: 2 / 3;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
     grid-template-rows: 1fr 1fr;
-}
-
-header>* {
-    border: solid green;
-    padding: 0px 20px;
+    background-color: white;
+    padding: 20px 40px;
+    column-gap: 30px;
 }
 
 .profile-links, .action-links, 
@@ -30,15 +35,24 @@ header>* {
     justify-content: flex-start;
 }
 
-.searchbar input[type='image'], .icon {
+.searchbar input[type='image'],
+.searchbar input[type='search'],
+.icon {
     height: 2rem;
+}
+
+.searchbar input[type='search'] {
+    flex: 1;
+    border-radius: 6px;
+    border: none;
+    background-color: #e2e8f0;
 }
 
 .pfp, .trending-icon {
     height: 3rem;
     width: 3rem;
     border-radius: 100px;
-    border: solid 2px black;
+    border: solid 2px #e2e8f0;
     object-fit: cover;
 }
 
@@ -53,19 +67,21 @@ header>* {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    background: rgb(247, 0, 255)
+    background: var(--blue);
+    color: white;
+    padding: 12px
 }
 
 .sidebar-links, .dashboard {
     display: grid;
     grid-template-columns: 2.2rem 1fr;
-    align-items: end;
-    gap: 6px;
+    align-items: center;
+    gap: 10px 6px;
     padding: 6px;
 }
 
 .sidebar-links h2 {
-    font-size: 1.7rem;
+    font-size: 1.1rem;
 }
 
 
@@ -102,7 +118,7 @@ main {
 }
 
 body>*, .projects, .announcements, .trending {
-    border: solid;
+    border: solid 1px;
 }
 
 h1, h2, h3, h4, p {
