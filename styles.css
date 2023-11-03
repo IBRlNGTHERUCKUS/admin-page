@@ -2,7 +2,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 6fr;
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
 }
 
@@ -34,15 +34,18 @@ header>* {
     height: 2rem;
 }
 
-.pfp {
+.pfp, .trending-icon {
     height: 3rem;
-    width: auto;
+    width: 3rem;
     border-radius: 100px;
     border: solid 2px black;
+    object-fit: cover;
 }
 
-.greeting .pfp {
+.pfp.big {
     height: 4.5rem;
+    width: 4.5rem;
+    
 }
 
 .sidebar {
@@ -104,4 +107,17 @@ body>*, .projects, .announcements, .trending {
 
 h1, h2, h3, h4, p {
     margin: 0;
+}
+
+.trending {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.trending-row {
+    display: flex; 
+    align-items: center;
+    gap: 10px;
 }
