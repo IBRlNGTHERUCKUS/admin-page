@@ -151,6 +151,15 @@ h1, h2, h3, h4, p {
     gap: 10px
 }
 
+/* Truncate announcements to 3 lines max */
+.announcement-content div p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 
 .trending-content {
     display: grid;
