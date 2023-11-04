@@ -2,6 +2,7 @@
 
 :root {
     --blue: #1992d4;
+    --light-gray: #e2e8f0;
 }
 
 body{
@@ -45,14 +46,14 @@ header {
     flex: 1;
     border-radius: 6px;
     border: none;
-    background-color: #e2e8f0;
+    background-color: var(--light-gray);
 }
 
 .pfp, .trending-icon {
     height: 3rem;
     width: 3rem;
     border-radius: 100px;
-    border: solid 2px #e2e8f0;
+    border: solid 2px var(--light-gray);
     object-fit: cover;
 }
 
@@ -60,6 +61,14 @@ header {
     height: 4.5rem;
     width: 4.5rem;
     
+}
+
+.action-links a {
+    color: white;
+    background-color: var(--blue);
+    text-decoration: none;
+    padding: 6px 30px;
+    border-radius: 18px;
 }
 
 .sidebar {
