@@ -18,10 +18,10 @@ header {
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: 1fr auto;
-    grid-template-rows: 1fr 1fr;
     background-color: white;
-    padding: 0px 20px 20px 20px;
+    padding:20px;
     column-gap: 30px;
+    row-gap: 10px
 }
 
 .profile-links, .action-links, 
@@ -44,6 +44,8 @@ header {
 
 .searchbar input[type='search'] {
     flex: 1;
+    /* Needed to prevent size deferring to minimum */
+    width: 0;
     border-radius: 6px;
     border: none;
     background-color: var(--light-gray);
@@ -67,8 +69,10 @@ header {
     color: white;
     background-color: var(--blue);
     text-decoration: none;
-    padding: 6px 30px;
+    padding: 6px 0px;
+    flex: 1;
     border-radius: 18px;
+    text-align: center;
 }
 
 .sidebar {
@@ -90,18 +94,6 @@ header {
     padding: 6px;
     transition: grid .8s ease;
     overflow:hidden
-}
-
-/* Animate the transition of the sidebar for mobile */
-@media only screen and (max-width: 600px) {
-    .sidebar-links h2, .dashboard h2 {
-        visibility: hidden;
-    }
-
-    .sidebar-links, .dashboard {
-        grid-template-columns: 2.2rem 0px;
-        gap: 10px 0px;
-    }
 }
 
 .sidebar-links h2 {
@@ -126,6 +118,10 @@ main {
     grid-template-rows: min-content;
     gap: 12px;
     text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 600px) {
+    
 }
 
 main h2 {
@@ -183,4 +179,31 @@ h1, h2, h3, h4, p {
 }
 
 
+@media only screen and (max-width: 600px) {
+    main, .projects, body {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        grid-template-columns: 1fr auto;
+        
+    }
+    .action-links, .greeting {
+      grid-column: 1/3;
+    }
+
+    .profile-links > *:not(a) {
+        display: none;
+    }
+
+    /* Animate the transition of the sidebar for mobile */
+    .sidebar-links h2, .dashboard h2 {
+        visibility: hidden;
+    }
+
+    .sidebar-links, .dashboard {
+        grid-template-columns: 2.2rem 0px;
+        gap: 10px 0px;
+    }
+}
 
