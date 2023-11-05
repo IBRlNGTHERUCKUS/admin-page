@@ -79,14 +79,29 @@ header {
     background: var(--blue);
     color: white;
     padding: 12px
+
 }
 
 .sidebar-links, .dashboard {
     display: grid;
-    grid-template-columns: 2.2rem 1fr;
+    grid-template-columns: 2.2rem 8rem;
     align-items: center;
     gap: 10px 6px;
     padding: 6px;
+    transition: grid .8s ease;
+    overflow:hidden
+}
+
+/* Animate the transition of the sidebar for mobile */
+@media only screen and (max-width: 600px) {
+    .sidebar-links h2, .dashboard h2 {
+        visibility: hidden;
+    }
+
+    .sidebar-links, .dashboard {
+        grid-template-columns: 2.2rem 0px;
+        gap: 10px 0px;
+    }
 }
 
 .sidebar-links h2 {
@@ -166,3 +181,6 @@ h1, h2, h3, h4, p {
     grid-template-columns: auto 1fr;
     column-gap: 8px;
 }
+
+
+
