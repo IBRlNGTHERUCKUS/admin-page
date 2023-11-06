@@ -38,7 +38,7 @@ header {
 
 .searchbar input[type='image'],
 .searchbar input[type='search'],
-.icon {
+.icon, .sidebar-icon {
     height: 2rem;
 }
 
@@ -87,8 +87,6 @@ header {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    position: sticky;
-    top: 12px;
 }
 
 .dashboard, .top, .bottom {
@@ -195,6 +193,11 @@ h1, h2, h3, h4, p {
 
     body {
         position: relative;
+    }
+    
+    .sidebar-links {
+       position: sticky;
+    top: 12px;
     }
 
     /* Animate the transition of the sidebar for mobile */
