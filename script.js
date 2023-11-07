@@ -4,9 +4,16 @@ for (let thing of things) {
    thing.classList.toggle("truncated")})
 }
 
+// 
 const projects = document.querySelector(".projects");
 const newCard = document.querySelector("#new");
-newCard.addEventListener("click", getCardInfo);
+newCard.addEventListener("click", ()=>{popupForm.style.display='grid'});
+
+const closeButton = document.querySelector("#closeButton");
+const submitButton = document.querySelector("#submitButton");
+const popupForm = document.querySelector(".popup-form");
+
+closeButton.addEventListener("click", ()=>{popupForm.style.display='none'});
 
 class Project {
     constructor(name, imageURL, description) {
@@ -17,29 +24,6 @@ class Project {
 }
 
 let test = new Project("this is a test", "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-26853jpg&fm=jpg", "it a thing");
-
-function getCardInfo() {
-    let bg = document.createElement("div");
-    bg.classList.add("opaque-bg"); 
-    let form = document.createElement("form");
-    form.classList.add("card-creator");
-    form.classList.add("card");
-    let nameInput = document.createElement("input");
-    let imgInput = document.createElement("input");
-    let descInput = document.createElement("input");
-    let closeButton = document.createElement("button");
-    closeButton.textContent = "Close";
-    closeButton.addEventListener("click", ()=>{document.querySelector("body").removeChild(bg)})
-    form.appendChild(nameInput);
-    form.appendChild(imgInput);
-    form.appendChild(descInput);
-    form.appendChild(closeButton);
-    bg.appendChild(form); 
-    document.querySelector("body").appendChild(bg);
-
-}
-
-getCardInfo();
 
 function createCard(project) {
     let card = document.createElement("div");
@@ -54,7 +38,16 @@ function createCard(project) {
     card.appendChild(cardName);
     card.appendChild(cardImage);
     card.appendChild(cardDesc);
+    console.log(card);
     projects.appendChild(card);
 }
 
-createCard(test);
+submitButton.addEventListener("click", ()=>{
+    let temp = new Project(
+        document.querySelector('#project-name').value,
+        document.querySelector('#project-image-url').value,
+        document.querySelector('#project-description').value
+    );
+    createCard(temp);
+    popupForm.style.display='none'
+})

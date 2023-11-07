@@ -65,14 +65,19 @@ header {
     
 }
 
-.action-links a {
+.action-links button {
+    flex: 1;
+}
+
+button {
     color: white;
     background-color: var(--blue);
     text-decoration: none;
     padding: 6px 0px;
-    flex: 1;
     border-radius: 18px;
     text-align: center;
+    border: none;
+    flex: 1;
 }
 
 .sidebar {
@@ -134,7 +139,7 @@ main h2 {
 }
 
 .card {
-    border-left: 5px solid orange
+    border-left: 5px solid orange;
 }
 
 .card img {
@@ -216,18 +221,20 @@ h1, h2, h3, h4, p {
 }
 
 
-.opaque-bg {
-height: 100vh;
-width: 100vw;
-position: fixed;
-background: rgba(0, 0, 0, 0.5);
-z-index: 2;
-display: grid;
-place-items: center;
+.popup-form {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none;
+    place-items: center;
 }
 
 .card-creator {
-width: 50vw;
-height 50vh;
-
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

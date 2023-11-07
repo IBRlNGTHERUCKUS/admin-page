@@ -25,9 +25,9 @@
             <div class="greeting-text">Welcome <h2>Morgan Oakley @morgan</h2></div>
         </div>
         <div class="action-links">
-            <a id="new" href="">New</a>
-            <a href="">Upload</a>
-            <a href="">Share</a>
+            <button id="new">New</button>
+            <button id="upload">Upload</button>
+            <button id="share">Share</button>
         </div>
     </header>
     <div class="sidebar">
@@ -166,5 +166,20 @@
         </div>
         </div>
     </main>
+    <div class="popup-form">
+        <!-- onsubmit="return false" prevents the page from refreshing on form submission -->
+        <form onsubmit="return false" action="" class="card-creator card">
+            <label for="">Project Name:</label>
+            <input id="project-name" type="text">
+            <label for="">Image URL:</label>
+            <input id="project-image-url" type="text">
+            <label for="">Description:</label>
+            <input id="project-description" type="text">
+            <div class="action-links">
+                <button id="submitButton">Submit</button>
+                <button id="closeButton">Close</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
