@@ -215,3 +215,19 @@ h1, h2, h3, h4, p {
     }
 }
 
+
+.opaque-bg {
+height: 100vh;
+width: 100vw;
+position: fixed;
+background: rgba(0, 0, 0, 0.5);
+z-index: 2;
+display: grid;
+place-items: center;
+}
+
+.card-creator {
+width: 50vw;
+height 50vh;
+
+}

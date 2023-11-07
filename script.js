@@ -5,6 +5,8 @@ for (let thing of things) {
 }
 
 const projects = document.querySelector(".projects");
+const newCard = document.querySelector("#new");
+newCard.addEventListener("click", getCardInfo);
 
 class Project {
     constructor(name, imageURL, description) {
@@ -18,9 +20,26 @@ let test = new Project("this is a test", "https://images.pexels.com/photos/26853
 
 function getCardInfo() {
     let bg = document.createElement("div");
-    bg.classList.add("")
+    bg.classList.add("opaque-bg"); 
+    let form = document.createElement("form");
+    form.classList.add("card-creator");
+    form.classList.add("card");
+    let nameInput = document.createElement("input");
+    let imgInput = document.createElement("input");
+    let descInput = document.createElement("input");
+    let closeButton = document.createElement("button");
+    closeButton.textContent = "Close";
+    closeButton.addEventListener("click", ()=>{document.querySelector("body").removeChild(bg)})
+    form.appendChild(nameInput);
+    form.appendChild(imgInput);
+    form.appendChild(descInput);
+    form.appendChild(closeButton);
+    bg.appendChild(form); 
+    document.querySelector("body").appendChild(bg);
 
 }
+
+getCardInfo();
 
 function createCard(project) {
     let card = document.createElement("div");
