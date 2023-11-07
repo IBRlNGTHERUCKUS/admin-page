@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script> 
 </head>
 <body>
     <header>
@@ -64,7 +65,8 @@
             <h2>Your Projects</h2>
             <div class="card">
                 <h2>Pumpkin Patch</h2>
-                <p>Website advertising for a pumpkin patch. Features a Halloween countdown, a ticket page that
+                <img src = "./images/pumpkin.jpeg">
+                <p class="truncated">Website advertising for a pumpkin patch. Features a Halloween countdown, a ticket page that
                 adds selected ticket prices, and a contact page with a form for submitting a message.</p>
                 <label for="like"></label>
                 <input id="like" type="image" class="card-button" src="./images/icons/thumb-up-outline.svg" alt="">
@@ -75,7 +77,8 @@
             </div>
             <div class="card">
                 <h2>Calculator</h2>
-                <p>A calculator in the style of an oldschool gameboy color. Supports basic operations including modulus. </p>
+                <img src = "./images/calculator.jpg">
+                <p class="truncated">A calculator in the style of an oldschool gameboy color. Supports basic operations including modulus. </p>
                 <label for="like"></label>
                 <input id="like" type="image" class="card-button" src="./images/icons/thumb-up-outline.svg" alt="">
                 <label for="github"></label>
@@ -85,7 +88,8 @@
             </div>
             <div class="card">
                 <h2>Etch a Sketch</h2>
-                <p>A drawing website that changes the colors of a grid based on if the user
+                <img src = "./images/EAS.jpeg">
+                <p class="truncated">A drawing website that changes the colors of a grid based on if the user
                 hovers over it with their mouse. Includes a custom animated toggle button to switch from rgb colors
                 to a more pastel pallette.</p>
                 <label for="like"></label>
@@ -97,7 +101,7 @@
             </div>
             <div class="card">
                 <h2>Hacking Simulator</h2>
-                <p>Simulates being a hackerman by converting user keypresses to gibberish hacking terms.
+                <p class="truncated">Simulates being a hackerman by converting user keypresses to gibberish hacking terms.
                 Includes a typewriter effect that makes text appear one letter at a time as if it is 
                 being typed. </p>
                 <label for="like"></label>
@@ -109,7 +113,7 @@
             </div>
             <div class="card">
                 <h2>Rock Paper Scissors</h2>
-                <p>A simple game of rock paper scissors styled after the card game Inscryption.
+                <p class="truncated">A simple game of rock paper scissors styled after the card game Inscryption.
                 The user chooses a card and the opponent bot's card is flipped and revealed. </p>
                 <label for="like"></label>
                 <input id="like" type="image" class="card-button" src="./images/icons/thumb-up-outline.svg" alt="">
@@ -120,7 +124,7 @@
             </div>
             <div class="card">
                 <h2>Full Moon Space Travel</h2>
-                <p>Landing page for a fictional space tourism company.</p>
+                <p class="truncated">Landing page for a fictional space tourism company.</p>
                 <label for="like"></label>
                 <input id="like" type="image" class="card-button" src="./images/icons/thumb-up-outline.svg" alt="">
                 <label for="github"></label>
@@ -129,20 +133,21 @@
                 <input id="share" type="image" class="card-button" src="./images/icons/share.svg" alt="">
             </div>
         </div>
+        <div>
         <div class="announcements">
             <h2>Announcements</h2>
             <div class="announcement-content">
                 <div>
                     <h4>Site Maintenance</h4>
-                    <p> adipiscing elit, iusmod tempor incididunt ut </p>
+                    <p class="truncated"> adipiscing elit, iusmod tempor incididunt ut </p>
                 </div>
                 <div>
                     <h4>Community Share Day</h4>
-                    <p>Lorem onsectetur sed do eiusmod tempor incididunt ut</p>
+                    <p class="truncated">Lorem onsectetur sed do eiusmod tempor incididunt ut</p>
                 </div>
                 <div>
                     <h4>Updated Privacy Policy</h4>
-                    <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                    <p class="truncated">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
                 </div>
             </div>
         </div>
@@ -158,6 +163,7 @@
                 <img src="data:image/jpeg;base64,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" alt="" class="trending-icon">
                 <div class="trending-text">@alex <br>No Traffic Maker</div>
             </div>
+        </div>
         </div>
     </main>
 </body>
